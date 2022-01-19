@@ -19,7 +19,7 @@ To install:<br>
 
 And run  <br>
 <code> cd Django-CRM </code><br>
-<code>pip3 install django requests Pillow </code>
+<code>pip3 install django requests Pillow </code><br>
 <code>python3 manage.py migrate </code><br>
 <code>python3 manage.py runserver </code>
 

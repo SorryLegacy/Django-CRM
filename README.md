@@ -18,6 +18,8 @@ To install:<br>
 <code>git copy https://github.com/SorryLegacy/Django-CRM.git </code><br>
 
 And run  <br>
+<code> cd Django-CRM </code><br>
+<code>pip3 install django requests Pillow </code>
 <code>python3 manage.py migrate </code><br>
 <code>python3 manage.py runserver </code>
 

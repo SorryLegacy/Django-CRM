@@ -11,7 +11,6 @@ CRM for receiving applications📓<br>
 Price, which is used for cards and price tables with services 💵<br>
 Telebot to send requests to telegram chat 📞
 
-Invite to chat Tg: https://t.me/+GxI_jdFENztlZTQy
 
 
 To install:<br>

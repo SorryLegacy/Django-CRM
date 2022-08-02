@@ -8,8 +8,8 @@ from price.models import PriceTable, PriceCard
 from telebot.sendmessage import send_telegram
 
 
-
-def first_page(requset):
+def first_page(request):
+    """Main page with all models"""
     slider_list = CmsSlider.objects.all()
     pc_1 = PriceCard.objects.get(pk=1)
     pc_2 = PriceCard.objects.get(pk=2)
@@ -25,21 +25,22 @@ def first_page(requset):
             'form': form,
         }
 
-    return render(requset, './index.html', dict_obj)
+    return render(request, './index.html', dict_obj)
 
 
-def thanks_page(requset):
-    if requset.POST:
-        name = requset.POST['name']
-        phone = requset.POST['phone']
+def thanks_page(request):
+    """Thanks page for customer who leave order"""
+    if request.POST:
+        name = request.POST['name']
+        phone = request.POST['phone']
         element = Order(order_name=name, order_phone=phone)
         element.save()
         send_telegram(name, phone)
-        return render(requset, './thanks.html',
+        return render(request, './thanks.html',
                       {
                           'name': name,
                           'phone': phone,
                       })
     else:
-        return render(requset, './thanks.html', '')
+        return render(request, './thanks.html', '')
 # Create your views here.

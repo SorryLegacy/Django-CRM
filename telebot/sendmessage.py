@@ -3,6 +3,7 @@ from .models import TeleSettings
 
 
 def send_telegram(name, phone):
+    """Parse text and send text to telegram group"""
     if TeleSettings.objects.get(pk=1):
         settings = TeleSettings.objects.get(pk=1)
         token = str(settings.tg_token)
@@ -32,7 +33,7 @@ def send_telegram(name, phone):
 
             })
 
-        except:
+        except ValueError:
             pass
 
         finally:
@@ -42,7 +43,6 @@ def send_telegram(name, phone):
                 print("Ошибка 500")
             else:
                 print("Всё окей")
-
 
     else:
         pass

@@ -13,13 +13,19 @@ Telebot to send requests to telegram chat 📞
 
 
 
-To install:<br>
+<h3>To install:</h3><br>
 <code>git copy https://github.com/SorryLegacy/Django-CRM.git </code><br>
 
-And run  <br>
-<code> cd Django-CRM </code><br>
-<code>pip3 install django requests Pillow </code><br>
-<code>python3 manage.py migrate </code><br>
-<code>python3 manage.py runserver </code>
+<p><h3>And run</h3><p>
+<ul>
+<li><code>pip3 install -r requirements.txt </code></li>
+<li><code>python3 manage.py migrate </code></li>
+<li><code>python3 manage.py runserver </code></li>
+</ul></p>
+<h3>Or with docker-compose:</h3>
+<ul>
+    <li><code>docker-compose up -d</code></li>
+</ul>
+
 
 

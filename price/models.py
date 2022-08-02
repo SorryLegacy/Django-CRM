@@ -4,6 +4,7 @@ from django.db import models
 # Create your models here.
 
 class PriceCard(models.Model):
+    """Model for price card on page"""
     pc_value = models.CharField(max_length=50, verbose_name='Цена')
     pc_description = models.CharField(max_length=200, verbose_name='Описание')
 
@@ -16,6 +17,7 @@ class PriceCard(models.Model):
 
 
 class PriceTable(models.Model):
+    """Model for table"""
     pt_title = models.CharField(max_length=200, verbose_name='Услуга')
     pt_old_price = models.CharField(max_length=50, verbose_name='Старая цена')
     pt_new_price = models.CharField(max_length=50, verbose_name='Новая цена')
